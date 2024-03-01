@@ -10,7 +10,8 @@ const { data } = useQuery({
 </script>
 <template lang="">
   <div
-    class="w-screen bg-[length:100%] scale-[200px] object-fill bg-bottom bg-no-repeat bg-[url('@/assets/images/article-image-hero.jpg')] md:bg-[url('src/assets/images/hero.jpg')] from-[rgba(0,0,0,0.31)] to-[rgba(0,0,0,0.31)] text-white"
+    :style="{ backgroundImage: `url('${data?.data?.large_image}')` }"
+    class="w-screen bg-[length:100%] scale-[200px] object-fill bg-bottom bg-no-repeat  from-[rgba(0,0,0,0.31)] to-[rgba(0,0,0,0.31)] text-white"
   >
     <div class="container mx-auto md:pt-[400px] md:pb-[80px] pt-[87px] pb-[25px] p-5">
       <div class="md:max-w-[600px] space-y-3">
