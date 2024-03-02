@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export const http = axios.create({
-  baseURL: `https://vue-blog-backend-git-main-nsmajm.vercel.app/api/api/`,
+  baseURL: `https://blog-api.nasimanjum.dev/api/api/`,
 })

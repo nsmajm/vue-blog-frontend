@@ -12,8 +12,8 @@ const getPost = async () =>
   await http.get(`post/details/${route.params.slug}`)
 
 const { data } = useQuery({
-  queryKey: ['post', route.params.slug],
-  queryFn: getPost
+  queryKey: ['post'],
+  queryFn: getPost,
 })
 </script>
 
