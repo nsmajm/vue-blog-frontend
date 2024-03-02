@@ -11,7 +11,7 @@ defineProps<PostProps>()
 </script>
 
 <template lang="">
-  <RouterLink :key="slug" :to="{ name: 'post', params: { slug: slug } }" class="w-full space-y-2">
+  <RouterLink :key="$route.fullPath" :to="{ name: 'post', params: { slug: slug } }" class="w-full space-y-2">
     <img class="w-full" :src="image_url" />
     <p class="text-[14px] pt-[14px]">{{ published_date }}</p>
     <h1 class="font-[700] text-[#141414] text-[24px] leading-[25.97px]">{{ title }}</h1>
