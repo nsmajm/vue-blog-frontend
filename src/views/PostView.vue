@@ -2,14 +2,14 @@
 import { useRoute } from 'vue-router'
 
 import PostList from '@/components/posts/PostList.vue'
-import axios from 'axios'
+import {http} from '@/utils/api.ts'
 import { useQuery } from '@tanstack/vue-query'
 
 const route = useRoute()
 
 
 const getPost = async () =>
-  await axios.get(`http://localhost:8000/api/post/details/${route.params.slug}`)
+  await http.get(`post/details/${route.params.slug}`)
 
 const { data } = useQuery({
   queryKey: ['post', route.params.slug],

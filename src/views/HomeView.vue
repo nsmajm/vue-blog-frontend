@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import HeroPost from '@/components/posts/HeroPost.vue'
 import PostList from '@/components/posts/PostList.vue'
-import axios from 'axios'
+import {http} from '@/utils/api.ts'
 import { useQuery } from '@tanstack/vue-query'
 
-const getAllPost = async () => await axios.get('http://localhost:8000/api/posts')
+const getAllPost = async () => await http.get('posts')
 
 const { data: posts } = useQuery({
   queryKey: ['todos'],

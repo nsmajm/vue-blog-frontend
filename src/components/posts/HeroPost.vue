@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import axios from 'axios'
+
 import { useQuery } from '@tanstack/vue-query'
 import { ref, watchEffect } from 'vue'
-const getPost = async () => await axios.get(`http://localhost:8000/api/featured`)
+import {http} from '@/utils/api.ts'
+const getPost = async () => await http.get(`featured`)
 
 const { data } = useQuery({
   queryKey: ['post'],

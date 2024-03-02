@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import PostList from '@/components/posts/PostList.vue'
-import axios from 'axios'
+import {http} from '@/utils/api.ts'
 import { useQuery } from '@tanstack/vue-query'
 import { useRoute } from 'vue-router'
 const route = useRoute()
 const getPost = async () =>
-  await axios.get(`http://localhost:8000/api/post/details/recent_post`)
+  await http.get(`post/details/recent_post`)
 
 const { data } = useQuery({
   queryKey: ['post'],
